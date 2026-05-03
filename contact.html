@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Boutique - Contact</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fdf6f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe4e1;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d94f6d;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+}
+
+.hamburger div {
+  height: 3px;
+  background: #d94f6d;
+  margin: 4px 0;
+}
+
+/* NAV */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #ffe4e1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d94f6d;
+  margin: 5px 0;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  padding: 30px 10px 10px;
+  color: #d94f6d;
+  font-size: 1.8rem;
+}
+
+/* CARD */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* SECTIONS */
+.info {
+  margin-bottom: 20px;
+}
+
+.info h3 {
+  color: #d94f6d;
+  margin-bottom: 8px;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* EMAIL BUTTON */
+.email-btn {
+  display: inline-block;
+  background: #d94f6d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.email-btn:hover {
+  background: #c03e5a;
+}
+
+/* PAYMENT BOX */
+.highlight {
+  background: #fff0f5;
+  border-left: 5px solid #d94f6d;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  padding: 10px 12px;
+  background: #fff0f5;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+
+.social-link:hover {
+  background: #ffd6e7;
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Flower Boutique</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="Pricelist.html">Prices</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+</header>
+
+<div class="title">🌸 Contact Us 🌸</div>
+
+<main class="container">
+
+  <div class="card">
+
+    <!-- PHONE -->
+    <div class="info">
+      <h3>📞 Phone Number</h3>
+      <p>+233 592 217 390</p>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="info">
+      <h3>📧 Email</h3>
+      <a class="email-btn"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=agyemangakosua021@gmail.com&su=Flower%20Inquiry"
+         target="_blank">
+        ✉️ Send us an Email
+      </a>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="info">
+      <h3>💳 Payment Methods</h3>
+      <div class="highlight">
+        MTN Mobile money
+      </div>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="info socials">
+      <h3>🌸 Follow Us</h3>
+
+      <a class="social-link" href="https://www.instagram.com/bijoux._bouquet?igsh=c3JqYnV6Z21lbnFn"_blank">
+        📸 Instagram
+      </a>
+
+      <a class="social-link" href="https://www.tiktok.com/@bijoux.bouquet_events?_r=1&_t=ZS-963c1ydopAm">
+        🎵 TikTok
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

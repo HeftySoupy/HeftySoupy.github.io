@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Boutique - Gallery</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fdf6f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe4e1;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d94f6d;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+}
+
+.hamburger div {
+  height: 3px;
+  background: #d94f6d;
+  margin: 4px 0;
+}
+
+/* NAV */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #ffe4e1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d94f6d;
+  margin: 5px 0;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  padding: 30px 10px 10px;
+  color: #d94f6d;
+  font-size: 1.8rem;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.video-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+/* VIDEO FIX (IMPORTANT) */
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: black;
+}
+
+/* CAPTION */
+.caption {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Flower Boutique</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="Pricelist.html">Prices</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="title">🌸 "Best sales made so far" 🌸</div>
+
+<main>
+  <div class="gallery">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo1.mp4" type="video/mp4">
+      </video>
+      <div class="caption">Box Bouquet with Chocolate</div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo2.mp4" type="video/mp4">
+      </video>
+      <div class="caption">10 Stem Bouquet</div>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo3.mp4" type="video/mp4">
+      </video>
+      <div class="caption">Freshly Shipped FLowers</div>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo4.mp4" type="video/mp4">
+      </video>
+      <div class="caption">Colored 10 Stem Bouquet</div>
+    </div>
+
+    <!-- VIDEO 5 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo5.mp4" type="video/mp4">
+      </video>
+      <div class="caption">25 stem bouquet with Rucus</div>
+    </div>
+
+    <!-- VIDEO 6 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo6.mp4" type="video/mp4">
+      </video>
+      <div class="caption">White Box Bouquet</div>
+    </div>
+
+    <!-- VIDEO 7 -->
+    <div class="video-card">
+      <video controls>
+        <source src="flowervideo7.mp4" type="video/mp4">
+      </video>
+      <div class="caption">35 Stem Bouquet (Gypso and Butterfly)</div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

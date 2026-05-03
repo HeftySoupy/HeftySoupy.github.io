@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price List - Flower Boutique</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fdf6f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe4e1;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d94f6d;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+}
+
+.hamburger div {
+  height: 3px;
+  background: #d94f6d;
+  margin: 4px 0;
+}
+
+/* NAV */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #ffe4e1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d94f6d;
+  margin: 5px 0;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* NOTE (NOW ABOVE IMAGE) */
+.note {
+  margin-bottom: 25px;
+  max-width: 700px;
+  background: #fff0f5;
+  border-left: 5px solid #d94f6d;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* IMAGE */
+.container img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Flower Boutique</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- NOTE ABOVE IMAGE -->
+    <div class="note">
+      🌸 <strong>Important Notice:</strong><br><br>
+      The prices for <strong>roses</strong> and <strong>chrysanthemums</strong> are the same.<br>
+      <strong>Lilies</strong> are priced at <strong>117 GHC</strong>.
+    </div>
+
+    <!-- PRICE LIST IMAGE -->
+    <img src="flowerprices.jpg" alt="Price List">
+
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
